@@ -10,11 +10,13 @@ namespace stringPractice
             Console.WriteLine("What word would you like to search?");
             string searchedWord = Console.ReadLine();
             bool wordFound = true;
-            if (aliceInWonderlandSentance.ToUpper().Contains(searchedWord.ToUpper()))
+            string upperSearchWord = searchedWord.ToUpper();
+            string upperAliceInWonderlandSentance = aliceInWonderlandSentance.ToUpper();
+            if (upperAliceInWonderlandSentance.Contains(upperSearchWord))
                 {
                 wordFound = true;
                 Console.WriteLine(wordFound);
-                int indexOfSearchedWord = aliceInWonderlandSentance.IndexOf(searchedWord);
+                int indexOfSearchedWord = upperAliceInWonderlandSentance.IndexOf(upperSearchWord);
                 Console.WriteLine(indexOfSearchedWord);
                 int lengthOfSearchedWord = searchedWord.Length;
                 Console.WriteLine(lengthOfSearchedWord);
